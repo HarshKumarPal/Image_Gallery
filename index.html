@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Image Gallery</h1>
+        <input type="text" id="search-bar" placeholder="Search for image">
+    </header>
+    <div class="gallery-container">
+        <div class="main-image">
+            <img id="current" src="mountain.jpg" alt="Gallery Image" data-name="Image 1" data-description="This is the description for Image 1">
+            <div class="tooltip">
+                <strong id="image-name">Image 1</strong>
+                <p id="image-description">This is the description for Image 1</p>
+            </div>
+        </div>
+        <div class="thumbnails" id="thumbnails-container">
+            <!-- Thumbnails will be dynamically generated here -->
+        </div>
+        <div class="navigation">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+            
+            <input type="file" id="image-upload" style="display: none;" accept="image/*">
+            <button id="add-image-button">Add Image</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
