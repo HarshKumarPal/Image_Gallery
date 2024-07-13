@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url('https://images.unsplash.com/photo-1560975684-9a7b778c2dd6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 50px;
+    color: #afa4f0;
+    margin-bottom: 15px;
+}
+
+header input[type="text"] {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    width: 400px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.gallery-container {
+    width: 100%;
+    max-width: 700px;
+    background-color: rgba(7, 5, 5, 0.8);
+    padding: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-image {
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.8);
+}
+
+.main-image {
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.main-image img {
+    width: 100%;
+    max-height: 350px;
+    border-radius: 15px;
+}
+
+.main-image .tooltip {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f5acac;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.main-image:hover .tooltip {
+    display: flex;
+    opacity: 1;
+}
+
+#image-name {
+    font-size: 35px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#image-description {
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    color: azure;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 80px;
+}
+
+.thumbnail-container {
+    position: relative;
+    margin: 5px;
+}
+
+.thumbnail {
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.delete-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #7fb8f5;
+    border: none;
+    color: rgb(19, 22, 22);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.navigation button:hover {
+    background-color: #3f8de0;
+}
+
+.navigation #add-image-button {
+    padding: 10px 20px;
+    background-color: #7fb8f5;
+    border: none;
+    color: rgb(19, 22, 22);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.navigation #add-image-button:hover {
+    background-color: #3f8de0;
+}
